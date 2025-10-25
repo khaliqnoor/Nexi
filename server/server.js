@@ -7,11 +7,12 @@ import {serve} from 'inngest/express'
 
 const app = express()
 await connectDB()
+
 app.use(express.json())
 app.use(cors())
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!, how are you all doing is everything all right')
 })
 app.use('/api/inngest', serve({ client: inngest, functions }))
 
