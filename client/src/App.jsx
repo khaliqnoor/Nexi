@@ -3,7 +3,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Login from './pages/Login'
 import Feed from './pages/Feed'
 import Messages from './pages/Messages'
-import Chatbox from './pages/Chatbox'
+import ChatBox from './pages/ChatBox.jsx'
 import Connections from './pages/Connections'
 import Discover from './pages/Discover'
 import Profile from './pages/Profile'
@@ -70,7 +70,7 @@ const dispatch = useDispatch()
         <Route path='/' element={ !user ? <Login /> : <Layout />} >
              <Route index  element={<Feed />} />
              <Route path='messages'  element={<Messages />} />    
-             <Route path='messages/:userid'  element={<Chatbox />} />    
+             <Route path='messages/:userid'  element={<ChatBox />} />    
              <Route path='connections'  element={<Connections />} />    
              <Route path='discover'  element={<Discover />} />    
              <Route path='profile'  element={<Profile />} />    

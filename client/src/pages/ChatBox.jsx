@@ -1,5 +1,4 @@
 import React from 'react'
-import { dummyMessagesData, dummyUserData } from '../assets/assets'
 import { useRef, useState, useEffect } from 'react'
 import { Image, ImageIcon, SendHorizonal, SendIcon } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,7 +9,7 @@ import { addMessage, fetchMessages, resetMessages } from '../features/messages/m
 import toast from 'react-hot-toast'
 import { fetchUser } from '../features/user/userSlice'
 
-const Chatbox = () => {
+const ChatBox = () => {
 
   const {messages} = useSelector((state)=> state.messages)
   const { userId } = useParams()
@@ -135,4 +134,4 @@ const Chatbox = () => {
   )
 }
 
-export default Chatbox
+export default ChatBox
