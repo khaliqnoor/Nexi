@@ -23,6 +23,7 @@ const Connections = () => {
 
 
   const {connections, followers, following, pendingConnections} = useSelector((state)=> state.connections)
+
   const [currenttab, setCurrenttab] = useState('Followers')
   const dataArray = [
     { label: "Followers", value: followers, icon: Users },
@@ -139,7 +140,11 @@ const Connections = () => {
                           }
                           {
                             currenttab === 'Connections' && (
-                              <button onClick={()=> navigate(`/messages/${user._id}`)} className="w-full text-sm rounded bg-slate-100 hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer flex items-center justify-center gap-1 ">
+                                          <button onClick={() => {
+              console.log("Opening chat for:", user._id)
+              navigate(`/messages/${user._id}`)
+            }}
+                        className="w-full text-sm rounded bg-slate-100 hover:bg-slate-200 text-black active:scale-95 transition cursor-pointer flex items-center justify-center gap-1 ">
                                 <MessageSquare className="w-4 h-4" />
                                Message
                               </button>

@@ -222,7 +222,7 @@ export const unfollowUser = async (req,res) => {
             const followers = user.followers
             const following = user.following
 
-            const pendingConnections = (await Connection.find({to_user_id: userId, status: 'pending'}).populate('from_user_id')).map(connections.from_user_id)
+            const pendingConnections = (await Connection.find({to_user_id: userId, status: 'pending'}).populate('from_user_id')).map(conn => conn.from_user_id)
             res.json({success: true, connections, followers, following, pendingConnections})
 
         } catch (error) {

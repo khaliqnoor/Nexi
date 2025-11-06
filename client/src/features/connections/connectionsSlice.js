@@ -13,6 +13,7 @@ export const fetchConnections = createAsyncThunk('connections/fetchConnections',
         headers: {Authorization: `Bearer ${token}`}
     })
     return data.success ? data : null
+    
 })
 
 const connectionsSlice = createSlice({
