@@ -49,7 +49,6 @@ export const addPost = async (req, res) => {
 
 
 // Get posts
-// Due to this function teh user will see his own posts in teh feed as well as to whom he is following or followers 
 export const getFeedPosts = async (req, res) => {
   try {
     const {userId} = req.auth()

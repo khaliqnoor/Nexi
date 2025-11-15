@@ -48,7 +48,7 @@ const ProfileModal = ({setShowEdit}) => {
 
 
             <form className='space-y-4' onSubmit={e=> toast.promise(handleSaveProfile(e), {loading: 'Saving...'})}>
-                    {/* Profile Picture */}
+
                     <div className='flex flex-col items-start gap-3 '>
                         <label htmlFor="profile_picture" className='block text-sm font-medium text-gray-700 mb-1 '>
                                 Profile Picture
@@ -62,7 +62,6 @@ const ProfileModal = ({setShowEdit}) => {
                         </label>
                     </div>
 
-                    {/* Cover Photo */}
                     <div className='flex flex-col items-start gap-3'>
                         <label htmlFor="cover_photo" className='block text-sm font-medium text-gray-700 mb-1'>
                             Cover Photo

@@ -8,7 +8,6 @@ import sendEmail from "../configs/nodeMailer.js";
 import Story from "../models/Story.js";
 import Message from "../models/Message.js";
 
-// Create a client to send and receive events
 export const inngest = new Inngest({ id: "Nexi" });
 
 // Inngest Functions to save user data to a database 

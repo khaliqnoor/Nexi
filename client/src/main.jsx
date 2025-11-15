@@ -8,7 +8,6 @@ import {Provider} from 'react-redux'
 import { store } from './app/store.js'
 
 
-// Import your Publishable Key
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 
 if (!PUBLISHABLE_KEY) {

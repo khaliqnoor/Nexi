@@ -20,7 +20,7 @@ const RecentMessages = () => {
             headers: { Authorization: `Bearer ${token}` }
         })
         if(data.success){
-            // group messages by sender and get the latest message for each sender
+            
             const groupedMessages = data.messages.reduce((acc, message)=>{
                 const senderId = message.from_user_id._id;
                 if(!acc[senderId] || new Date(message.createAt) > new Date(acc[senderId].createAt)){
@@ -29,7 +29,6 @@ const RecentMessages = () => {
                 return acc
             }, {})
 
-            // Sort messages by date
             const sortedMessages = Object.values(groupedMessages).sort((a,b)=> new Date(b.createAt) - new Date(a.createAt))
             setMessages(sortedMessages)
         } else {

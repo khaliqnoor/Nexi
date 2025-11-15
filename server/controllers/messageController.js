@@ -2,7 +2,6 @@ import fs from 'fs'
 import imagekit from '../configs/imageKit.js';
 import Message from '../models/Message.js';
 
-// Create an empty object to store SS Event connections
 const connections = {};
 
 // Controller function for the sse endpoint
@@ -16,7 +15,6 @@ export const sseController = (req, res)=>{
     res.setHeader('Connection', 'keep-alive')
     res.setHeader('Access-Control-Allow-Origin', '*')
 
-    // Add the client's response object to the connections object    
     connections[userId] = res
 
     // Send an initial event to the client 
@@ -24,7 +22,6 @@ export const sseController = (req, res)=>{
 
     // Handle Client Disconnection
     req.on('close', ()=> {
-        // remove teh clients response object from the connections array
         delete connections[userId]
         console.log('Client Disconnected');
 
@@ -89,7 +86,7 @@ export const getChatMessages = async (req, res) => {
                 {from_user_id: to_user_id, to_user_id: userId}
             ]
         }).sort({created_at: -1})
-        // Mark messages as seen
+        
       await Message.updateMany({from_user_id: to_user_id, to_user_id: userId}, {seen: true})
           res.json({ success: true, messages})
     } catch (error) {

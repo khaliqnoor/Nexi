@@ -1,5 +1,5 @@
 import express from 'express'
-  import cors from 'cors'
+import cors from 'cors'
 import 'dotenv/config'
 import connectDB from './configs/db.js'
 import {inngest, functions} from './inngest/index.js'
@@ -14,7 +14,6 @@ const app = express()
 await connectDB()
 
 
-// The below clerkmiddleware will add the auth property when the user is authenticated like login or not 
 
 app.use(express.json())
 app.use(cors())

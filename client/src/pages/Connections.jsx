@@ -77,13 +77,11 @@ const Connections = () => {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="max-w-6xl mx-auto p-6 ">
-        {/* Title */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 mb-2 ">Connections</h1>
           <p className="text-slate-600">Manage your network and discover new connections</p>
         </div>
 
-        {/* Counts */}
             <div className="mb-8 flex flex-wrap gap-6 ">
               {dataArray.map((item, index)=> (
                 <div key={index} className="flex flex-col items-center justify-center gap-1 border h-20 w-40 border-gray-200 bg-white shadow rounded-md">
@@ -93,7 +91,6 @@ const Connections = () => {
               ))}
             </div>
 
-              {/* Tabs   */}
               <div className="inline-flex flex-wrap items-center border border-gray-200 rounded-md p-1 bg-white shadow-sm ">
                 {
                   dataArray.map((tab)=> (
@@ -109,7 +106,6 @@ const Connections = () => {
 
               </div>
 
-              {/* Connections */}
               <div className="flex flex-wrap gap-6 mt-6 ">
                   {dataArray.find((item)=> item.label === currenttab).value.map((user)=> (
                     <div key={user._id} className="w-full max-w-88 flex gap-5 p-6 bg-white shadow rounded-md ">
@@ -163,5 +159,3 @@ const Connections = () => {
 };
 
 export default Connections;
-
-// Check this all out on the chatgpt and other stuffs to clear your concepts in a very well manared way so that you dont get confused

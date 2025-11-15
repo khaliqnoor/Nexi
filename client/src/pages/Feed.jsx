@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 
 const Feed = () => {
   const [feeds, setFeeds] = useState([]);
-  const [loading, setLoading] = useState(true); //the fething data will take a little time so we would show a loading effect till then
+  const [loading, setLoading] = useState(true); 
   const {getToken} = useAuth()
 
   const fetchFeeds = async () => {
@@ -36,7 +36,6 @@ const Feed = () => {
 
   return !loading ? (
     <div className="h-full overflow-y-scroll no-scrollbar py-10 xl:pr-5 flex  justify-center xl:gap-8">
-      {/* Stories and the Posts Lists */}
       <div>
        <StoriesBar />
         <div className="p-4 space-y-6" >
@@ -46,7 +45,6 @@ const Feed = () => {
           </div>
       </div>
 
-      {/* Right SideBar */}
           <div className="max-xl:hidden sticky top-0">
             <div className="max-w-xs bg-white text-xs p-4 rounded-md inline-flex flex-col gap-2 shadow ">
               <h3 className="text-slate-800 font-semibold">Sponsored</h3>

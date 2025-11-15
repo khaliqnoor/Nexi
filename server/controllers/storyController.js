@@ -29,7 +29,6 @@ export const addUserStory = async (req, res) => {
             background_color,
         })
 
-        // Schedule story deletion after 24 hours
         await inngest.send({
             name: 'app/story.delete',
             data: { storyId: story._id}
@@ -51,7 +50,6 @@ export const getStories = async (req, res) => {
       const { userId } = req.auth()
       const user = await User.findById(userId)
 
-    //   Users connections and following
      const userIds = [userId, ...user.connections, ...user.following]
 
      const stories  =  await Story.find({

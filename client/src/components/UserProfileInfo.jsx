@@ -19,7 +19,7 @@ const UserProfileInfo = ({user, posts, profileId, setShowEdit}) => {
                   </div>
                   <p className='text-gray-600'>{user.username ? `@${user.username}`: 'Add a username'}</p>
                 </div>
-                {/* if user is not on other profile that means he is opening his own profile so we will give edit button */}
+             
                 {!profileId && 
                            <button onClick={()=> setShowEdit(true)} className='flex cursor-pointer items-center gap-2 border border-gray-300 hover:bg-gray-50 px-4 py-2 rounded-lg font-medium transition-colors mt-4 md:mt-0' >
                             <PenBox className='w-4 h-4 ' />

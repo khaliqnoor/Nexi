@@ -53,7 +53,6 @@ const StoriesBar = () => {
           </div>
         </div>
 
-        {/* Stories Card */}
         {stories.map((story, index) => (
           <div
             onClick={()=> setViewStory(story)}
@@ -92,10 +91,8 @@ const StoriesBar = () => {
         ))}
       </div>
 
-            {/* Add Story Model */}
             {showModel && <StoryModel setShowModel={setShowModel} fetchStories={fetchStories} />}
 
-            {/* View Story Model */}
             {viewStory && <StoryViewer viewStory={viewStory} setViewStory={setViewStory} />}
 
     </div>

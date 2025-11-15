@@ -10,8 +10,8 @@ const StoryModel = ({setShowModel, fetchStories}) => {
                                    
                 
     const {getToken} = useAuth();
-    const MAX_VIDEO_DURATION = 60; // SECONDS
-    const MAX_VIDEO_SIZE_MB = 50; //MB
+    const MAX_VIDEO_DURATION = 60; 
+    const MAX_VIDEO_SIZE_MB = 50; 
 
     const [mode, setMode] = useState('text')
     const [background, setBackground] = useState(bgColors[0])

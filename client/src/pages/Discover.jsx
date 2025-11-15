@@ -45,13 +45,11 @@ const Discover = () => {
   return (
     <div className='min-h-screen bg-gradient-to-b from-slate-50 to-white'>
       <div className='max-w-6xl mx-auto p-6 '>
-               {/* Title */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 mb-2 ">Discover People</h1>
           <p className="text-slate-600">Connect with amazing people and grow your network</p>
         </div>
 
-        {/* Search Bar */}
         <div className='mb-8 shadow-md rounded-md border border-slate-200/60 bg-white/80'>
             <div className='p-6'>
                 <div className='relative'>
