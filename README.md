@@ -12,7 +12,7 @@
 
 **🧠 Tech Stack**
 
-  Frontend: React, Tailwind Css
+  Frontend: React, Tailwind CSS
   Backend: Node.js, Express.js, MongoDB
 
   <img width="1364" height="686" alt="Nexi" src="https://github.com/user-attachments/assets/d80d2b1d-56b5-4725-8f87-1b24a131b92c" />
